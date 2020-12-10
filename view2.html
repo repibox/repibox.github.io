@@ -1,0 +1,53 @@
+<!--
+To use:
+Open in two tabs:
+//client-code2.html#{websocketID}
+
+-->
+
+<!doctype html>
+<html>
+<head>
+  <title>Repibox Viewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="-1">
+  <meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js" integrity="sha512-NFUcDlm4V+a2sjPX7gREIXgCSFja9cHtKPOL1zj6QhnE0vcY695MODehqkaGYTLyL2wxe/wtr4Z49SvqXq12UQ==" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-peer/9.8.0/simplepeer.min.js" integrity="sha512-E7n4M9VAeElTbAvxzEO92tYsjfg1e0INE+RQLEf3Dpra2EY2X2ygTaGi2NMpccKGY8Q7+npUX68igKUkAammKQ==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js" integrity="sha512-qoCTmFwBtCPvFhA+WAqatSOrghwpDhFHxwAGh+cppWonXbHA09nG1z5zi4/NGnp8dUhXiVrzA6EnKgJA+fyrpw==" crossorigin="anonymous"></script>
+
+  <!-- <script src="https://repibox.github.io/NoSleep.min.js"></script> -->
+
+  <script type="text/javascript">
+   const _0x40a3=['qrcode','byteLength','addEventListener','location','innerHTML','offline','appendChild','onmessage','log','<div><h1>YAYYYYasdf</h1>YESSSS<h2></h2></div><div><h1>YAYYYY</h1>YESSSS<h2></h2></div><div><h1>YAYYYY</h1>YESSSS<h2></h2></div><div><h1>YAYYYY</h1>YESSSS<h2></h2></div><div><h1>YAYYYY</h1>YESSSS<h2></h2></div><div><h1>YAYYYY</h1>YESSSS<h2></h2></div><div><h1>YAYYYY</h1>YESSSS<h2></h2></div><div><h1>YAYYYY</h1>YESSSS<h2></h2></div>','utf-8','onopen','div','encode','split','reload','createTextNode','online','decompressFromUint8Array','DOMContentLoaded','<div\x20id=\x27qrcodeCanvas\x27></div>','substr','#qrcodeCanvas','focus','body','https://repibox.github.io/view#','~OPEN\x20WS~isMain=','set','createElement','length','binaryType','came\x20online','hash','slice','send','<div\x20id=\x27loading\x27>Loading\x20Recipe<div\x20class=\x27loader\x27></div></div>','decode'];(function(_0x4ea963,_0x52cecd){const _0x40a3b6=function(_0x448826){while(--_0x448826){_0x4ea963['push'](_0x4ea963['shift']());}};_0x40a3b6(++_0x52cecd);}(_0x40a3,0x1b5));const _0x4488=function(_0x4ea963,_0x52cecd){_0x4ea963=_0x4ea963-0x146;let _0x40a3b6=_0x40a3[_0x4ea963];return _0x40a3b6;};const _0x3da57d=_0x4488,DEBUG=!![],enableCompression=!![],encoder=new TextEncoder('utf-8'),decoder=new TextDecoder(_0x3da57d(0x157)),isMain=location['hash'][_0x3da57d(0x16a)]===0x0,hash=window['location'][_0x3da57d(0x148)]['substr'](0x1),hashArray=hash[_0x3da57d(0x15b)]('_'),mainsId=hashArray[0x0];let connectionsId=null,nodeId=null,dataChunks=new Uint8Array();function setupWS(_0x131be3=undefined,_0x48844b=undefined,_0x119ba2=undefined){const _0x4f07ac=_0x3da57d;let _0x41c99d=!![];ws=new WebSocket('wss://repibox.com/ws/'),ws[_0x4f07ac(0x146)]='arraybuffer';const _0x23dffc=(_0x3f2d5a,_0x2fbeaa,_0x44cadc,_0x3469bc)=>{const _0x42be20=_0x4f07ac,_0x37a1ad=encoder[_0x42be20(0x15a)](_0x3f2d5a),_0x10fdcd=encoder['encode'](_0x2fbeaa),_0x4d45f5=encoder[_0x42be20(0x15a)](_0x44cadc),_0x516d44=new Uint8Array(_0x37a1ad[_0x42be20(0x14e)]+_0x10fdcd['byteLength']+_0x4d45f5['byteLength']+_0x3469bc[_0x42be20(0x14e)]);_0x516d44[_0x42be20(0x168)](_0x37a1ad),_0x516d44[_0x42be20(0x168)](_0x10fdcd,_0x37a1ad[_0x42be20(0x14e)]),_0x516d44[_0x42be20(0x168)](_0x4d45f5,_0x37a1ad[_0x42be20(0x14e)]+_0x10fdcd[_0x42be20(0x14e)]),_0x516d44[_0x42be20(0x168)](_0x3469bc,_0x37a1ad[_0x42be20(0x14e)]+_0x10fdcd[_0x42be20(0x14e)]+_0x4d45f5[_0x42be20(0x14e)]),ws[_0x42be20(0x14a)](_0x516d44);},_0x3369b9=(_0x4f6cbf,_0x3d6ca8)=>{const _0x2d4de0=_0x4f07ac;if(!isMain)switch(_0x4f6cbf){case'R':_0x23dffc(mainsId,nodeId,'R',encoder['encode'](_0x3d6ca8));}else{if(isMain)switch(_0x4f6cbf){case'C':let _0x2ffedd;enableCompression?_0x2ffedd=LZString['compressToUint8Array'](_0x3d6ca8):_0x2ffedd=encoder[_0x2d4de0(0x15a)](_0x3d6ca8);DEBUG&&(console[_0x2d4de0(0x155)](_0x3d6ca8['length']),console[_0x2d4de0(0x155)](_0x2ffedd[_0x2d4de0(0x14e)]));const _0x1dfad1=0x400*0x4-0x41;while(_0x2ffedd['byteLength']>_0x1dfad1){const _0x51f332=_0x2ffedd[_0x2d4de0(0x149)](0x0,_0x1dfad1);_0x2ffedd=_0x2ffedd['slice'](_0x1dfad1,_0x2ffedd[_0x2d4de0(0x14e)]),_0x23dffc(connectionsId,nodeId,'C',_0x51f332);}_0x23dffc(connectionsId,nodeId,'E',_0x2ffedd);}}},_0x185ce1=_0x3dba5c=>{const _0x5c94b7=_0x4f07ac,_0x52ce5b=new Uint8Array(_0x3dba5c),_0x994dc5=decoder[_0x5c94b7(0x14c)](_0x52ce5b[_0x5c94b7(0x149)](0x0,0x20)),_0x238a96=decoder[_0x5c94b7(0x14c)](_0x52ce5b[_0x5c94b7(0x149)](0x20,0x40)),_0x1e6cce=decoder[_0x5c94b7(0x14c)](_0x52ce5b['slice'](0x40,0x41)),_0x19d8f9=_0x52ce5b[_0x5c94b7(0x149)](0x41);if(!isMain){let _0x3c739a;switch(_0x1e6cce){case'C':_0x3c739a=new Uint8Array(dataChunks['byteLength']+_0x19d8f9['byteLength']),_0x3c739a[_0x5c94b7(0x168)](dataChunks),_0x3c739a[_0x5c94b7(0x168)](_0x19d8f9,dataChunks['byteLength']),dataChunks=_0x3c739a;break;case'E':_0x3c739a=new Uint8Array(dataChunks['byteLength']+_0x19d8f9[_0x5c94b7(0x14e)]),_0x3c739a[_0x5c94b7(0x168)](dataChunks),_0x3c739a[_0x5c94b7(0x168)](_0x19d8f9,dataChunks[_0x5c94b7(0x14e)]),dataChunks=_0x3c739a;break;}if(DEBUG)console[_0x5c94b7(0x155)](dataChunks['byteLength']);let _0x251336;enableCompression?_0x251336=LZString[_0x5c94b7(0x15f)](dataChunks):_0x251336=decoder[_0x5c94b7(0x14c)](dataChunks);if(_0x119ba2)_0x119ba2(_0x251336);}else{if(isMain)switch(_0x1e6cce){case'R':connectionsId=_0x238a96;if(_0x48844b)_0x3369b9('C',_0x48844b());break;}}};ws[_0x4f07ac(0x158)]=_0x434466=>{const _0xd2891c=_0x4f07ac;if(DEBUG)document[_0xd2891c(0x165)][_0xd2891c(0x153)](document[_0xd2891c(0x15d)](_0xd2891c(0x167)+isMain));ws[_0xd2891c(0x154)]=_0x31cfdb=>{let _0x93afdd=_0x31cfdb['data'];if(_0x41c99d){nodeId=_0x93afdd;if(_0x131be3)_0x131be3(nodeId);if(!isMain)_0x3369b9('R','');_0x41c99d=![];}else _0x185ce1(_0x93afdd);};};}window['addEventListener'](_0x3da57d(0x15e),()=>console[_0x3da57d(0x155)](_0x3da57d(0x147))),window[_0x3da57d(0x14f)](_0x3da57d(0x152),()=>console[_0x3da57d(0x155)]('came\x20offline')),document[_0x3da57d(0x14f)](_0x3da57d(0x160),()=>{const _0x43b2f9=_0x3da57d;function _0x564ed6(_0xb32823){const _0x18df04=_0x4488;url=_0x18df04(0x166)+_0xb32823+_0xb32823,DEBUG&&(console[_0x18df04(0x155)](_0xb32823),console[_0x18df04(0x155)](url)),jQuery(_0x18df04(0x163))[_0x18df04(0x14d)]({'text':url});}function _0x2f3e57(){const _0x4e190a=_0x4488;let _0x2d461e=_0x4e190a(0x156);return _0x2d461e+=_0x2d461e,_0x2d461e+=_0x2d461e,_0x2d461e+=_0x2d461e,_0x2d461e+=_0x2d461e,_0x2d461e+=_0x2d461e,_0x2d461e+=_0x2d461e,_0x2d461e+=_0x2d461e,_0x2d461e+=_0x2d461e,_0x2d461e+=_0x2d461e,_0x2d461e;}function _0x24f0d5(_0x2acfac){const _0x4eb336=_0x4488;document[_0x4eb336(0x165)][_0x4eb336(0x151)]=_0x2acfac;}isMain?setupWS(_0x564ed6,_0x2f3e57):setupWS(undefined,undefined,_0x24f0d5);if(isMain)document['body'][_0x43b2f9(0x151)]=_0x43b2f9(0x161);else{const _0x4ac52b=document[_0x43b2f9(0x169)](_0x43b2f9(0x159));_0x4ac52b[_0x43b2f9(0x151)]=_0x43b2f9(0x14b),document['body'][_0x43b2f9(0x153)](_0x4ac52b);}}),$(window)[_0x3da57d(0x164)](function(){const _0x319ef9=_0x3da57d;hash!==window[_0x319ef9(0x150)][_0x319ef9(0x148)][_0x319ef9(0x162)](0x1)&&location[_0x319ef9(0x15c)]();});
+
+      </script>
+
+      <style>
+      .loader {
+        border: 16px solid #f3f3f3; /* Light grey */
+        border-top: 16px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      </style>
+    </head>
+
+
+<body>
+
+
+</body>
+</html>
